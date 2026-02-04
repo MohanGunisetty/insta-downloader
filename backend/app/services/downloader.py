@@ -5,13 +5,15 @@ from typing import Optional, Dict, Any
 
 class DownloaderService:
     def __init__(self):
-        self.L = instaloader.Instaloader()
-        # Configure to be lightweight
+        # Configure to be lightweight and mimic a browser
+        self.L = instaloader.Instaloader(
+            user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+            iphone_support=False,
+            max_connection_attempts=3
+        )
         self.L.save_metadata = False
         self.L.download_video_thumbnails = False
         self.L.post_metadata_txt_pattern = ""
-        # We don't want to actually download to disk if we can avoid it, 
-        # but if we do, we need a target. We'll handle downloads separately if needed.
 
     async def get_media_info(self, url: str) -> Dict[str, Any]:
         """
