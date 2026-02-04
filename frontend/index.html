@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InstaLoader - Premium Downloader</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="glass-orb orb-1"></div>
+    <div class="glass-orb orb-2"></div>
+    
+    <main class="container">
+        <header>
+            <h1>Insta<span class="highlight">Loader</span></h1>
+            <p>Download Reels & Videos instantly.</p>
+        </header>
+
+        <section class="downloader-card">
+            <div class="input-group">
+                <textarea id="urlInput" placeholder="Paste Instagram URL(s) here...
+https://www.instagram.com/reel/..." rows="3"></textarea>
+            </div>
+            
+            <button id="downloadBtn" class="glow-button">
+                <span class="btn-text">Download Media</span>
+                <span class="loader hidden"></span>
+            </button>
+
+            <div id="error-message" class="error-msg hidden"></div>
+        </section>
+
+        <section id="resultsArea" class="results-grid hidden">
+            <!-- Results will be injected here -->
+        </section>
+        
+        <footer>
+            <p>For educational purposes only. Do not infringe copyright.</p>
+        </footer>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>

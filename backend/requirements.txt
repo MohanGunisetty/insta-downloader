@@ -1,0 +1,7 @@
+fastapi[all]
+uvicorn[standard]
+instaloader
+httpx
+python-multipart
+aiofiles
+jinja2
